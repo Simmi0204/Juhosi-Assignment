@@ -1,0 +1,19 @@
+CREATE TABLE auth (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL
+);
+INSERT INTO auth (username, password) VALUES
+  ('admin', 'password'),
+  ('customer1', 'password'),
+  ('customer2', 'password');
+CREATE TABLE customer (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  customer_id INT NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  phone VARCHAR(20) NOT NULL
+);
+INSERT INTO customer (customer_id, name, email, phone) VALUES
+  (1, 'Customer 1', 'customer1@example.com', '1234567890'),
+  (2, 'Customer 2', 'customer2@example.com', '9876543210');
