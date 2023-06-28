@@ -1,0 +1,15 @@
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var id = document.getElementById("id").value;
+    var password = document.getElementById("password").value;
+
+    // Validate user credentials
+    if (id === "admin" && password === "admin") {
+        window.location.href = "admin_view.html";
+    } else if ((id === "customer1" || id === "customer2") && password === "customer") {
+        window.location.href = "customer_form.html";
+    } else {
+        alert("Invalid login credentials.");
+    }
+});
